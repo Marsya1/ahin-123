@@ -500,12 +500,12 @@
                                                                 </select>
 
                                                                 <label for="keterangan">Keterangan</label>
-                                                                <input
+                                                                <input 
                                                                     type="text"
                                                                     id="keterangan"
                                                                     name="keterangan"
                                                                     class="form-control"
-                                                                    value="<?php echo $p['keterangan'] ?>">
+                                                                    value="<?php echo $p['keterangan'] ?>" required>
                                                                 <input type="hidden" name="idx" value="<?=$idb;?>">
 
                                                                 <input type="hidden" name="idx" value="<?=$idb;?>">
@@ -599,9 +599,9 @@
                             required="required">
                     </div>
                     <div class="form-group">
-                            <label>ID & Lokasi</label>
-                            <select name="id" class="custom-select form-control">
-                                <option selected="selected">Pilih ID Lokasi</option>
+                            <label for="pilihan">ID & Lokasi</label>
+                            <select id="pilihan" name="id" class="custom-select form-control" required>
+                                <option value="" disabled selected>Pilih ID Lokasi</option>
                                 <?php
 									$det=mysqli_query($conn,"select * from lokasi order by ID ASC");
 									while($d=mysqli_fetch_array($det)){
@@ -614,7 +614,7 @@
                         </div>
                     <div class="form-group">
                         <label>Keterangan</label>
-                    <input name="keterangan" id="keterangan" type="text" class="form-control">
+                    <input name="keterangan" id="keterangan" type="text" class="form-control" required>
                 </div>
 
 

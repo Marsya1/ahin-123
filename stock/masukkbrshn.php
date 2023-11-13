@@ -543,7 +543,7 @@
                                                                         id="tglmasuk"
                                                                         name="tglmasuk"
                                                                         class="form-control"
-                                                                        value="<?php echo $b['tglmasuk'] ?>">
+                                                                        value="<?php echo $b['tglmasuk'] ?>" required>
 
                                                                     <label for="jumlah">Jumlah</label>
                                                                     <input
@@ -636,9 +636,9 @@
                 <div class="modal-body">
                     <form action="tmb_masukkbrshn.php" method="post">
                         <div class="form-group">
-                            <label>Nama Barang</label>
-                            <select name="barang" class="custom-select form-control">
-                                <option selected="selected">Pilih barang</option>
+                            <label for="pilihan">Nama Barang</label>
+                            <select id="pilihan" name="barang" class="custom-select form-control" required>
+                                <option value="" disabled selected>Pilih barang</option>
                                 <?php
 									$det=mysqli_query($conn,"select * from sits_invkbrshn order by nama_barang ASC");
 									while($d=mysqli_fetch_array($det)){
@@ -651,11 +651,11 @@
                         </div>
                         <div class="form-group">
                             <label>Tanggal Masuk</label>
-                            <input name="tglmasuk" type="date" class="form-control">
+                            <input name="tglmasuk" type="date" class="form-control" required>
                         </div>
                         <div class="form-group">
                             <label>Jumlah</label>
-                            <input name="qty" type="number" min="1" class="form-control" placeholder="Qty">
+                            <input name="qty" type="number" min="1" class="form-control" placeholder="Qty" required>
                         </div>
 
                     </div>

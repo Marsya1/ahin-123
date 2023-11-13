@@ -10,7 +10,7 @@
         $nama_barang = $_POST['nama_barang'];
         $stock = $_POST['stock'];
 
-        $updatedata = mysqli_query($conn,"update sits_invkbrshn set tanggal='$tanggal',nama='$nama', stock='$stock'");
+        $updatedata = mysqli_query($conn,"update sits_invkbrshn set tanggal='$tanggal',nama_baramg='$nama_barang', stock='$stock'");
         
         //cek apakah berhasil
         if ($updatedata){

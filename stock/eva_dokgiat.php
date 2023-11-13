@@ -396,13 +396,13 @@
                                                             <div class="modal-body">
                                                             
                                                             <label for="tanggal">Tanggal</label>
-                                                            <input type="date" id="tanggal" name="tanggal" class="form-control" value="<?php echo $p['tanggal'] ?>">
+                                                            <input type="date" id="tanggal" name="tanggal" class="form-control" value="<?php echo $p['tanggal'] ?>" required>
 
                                                             <label for="lokasi">Lokasi</label>
-                                                            <input type="text" id="lokasi" name="lokasi" class="form-control" value="<?php echo $p['lokasi'] ?>">
+                                                            <input type="text" id="lokasi" name="lokasi" class="form-control" value="<?php echo $p['lokasi'] ?>" required>
 
                                                             <label for="keterangan">Keterangan</label>
-                                                            <input type="text" id="keterangan" name="keterangan" class="form-control" value="<?php echo $p['keterangan'] ?>">
+                                                            <input type="text" id="keterangan" name="keterangan" class="form-control" value="<?php echo $p['keterangan'] ?>" required>
 
                                                            
                                                             <input type="hidden" name="idx" value="<?=$idb;?>">
@@ -493,11 +493,11 @@
 								</div>
 								<div class="form-group">
 									<label>Lokasi</label>
-									<input name="lokasi" type="text" class="form-control">
+									<input name="lokasi" type="text" class="form-control" required>
 								</div>
                                 <div class="form-group">
 									<label>Keterangan</label>
-									<input name="keterangan" type="text" class="form-control">
+									<input name="keterangan" type="text" class="form-control" required>
 								</div>
                                 </div>
 							<div class="modal-footer">

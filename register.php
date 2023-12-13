@@ -53,7 +53,8 @@ if( isset($_POST['submit']) ){
     function cek_nama($username,$conn){
         $nickname = mysqli_real_escape_string($conn, $username);
         $query = "SELECT * FROM slogin WHERE username = '$nickname'";
-        if( $result = mysqli_query($conn, $query) ) return mysqli_num_rows($result);
+        if( $result = mysqli_query($conn, $query) ) 
+        return mysqli_num_rows($result);
     }
 ?>
 <!DOCTYPE html>
